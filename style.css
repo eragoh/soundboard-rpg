@@ -1,0 +1,67 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Soundboard Styling */
+#soundboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Tile Styling */
+.tile {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.tile:hover {
+    background-color: #367c39;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Tile Content Styling */
+.tile > div {
+    padding: 10px;
+}
+
+/* Song Name Styling */
+.tile > div:first-child {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Progress Text Styling */
+.progress-text {
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+/* Responsive Tiles */
+@media (max-width: 600px) {
+    .tile {
+        width: calc(100% - 20px); /* Full width on small screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .tile {
+        width: calc(50% - 20px); /* Half width on medium screens */
+    }
+}
+
+@media (min-width: 1001px) {
+    .tile {
+        width: calc(33.333% - 20px); /* One-third width on large screens */
+    }
+}
